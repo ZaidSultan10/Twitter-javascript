@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Twitter Clone</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/tweets.css">
+        <script src="https://kit.fontawesome.com/c939d0e917.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    </head>
+    <body>
+        <div class="container home-page">
+            <div class="navigation-container">
+                <div class="navigation">
+                    <div class="logo">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="home-link">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="profile-picture">
+                        <div class="profile"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="tweet-search-container">
+                    <input id="tweet-place-holder" type="text" placeholder="Search Tweet" onkeyup="onEnter(event)">
+                    <i class="fas fa-search fa-flip-horizontal " onclick="getTwitterData()"></i>
+                </div>
+                <div class="tweet-list">
+                    <div class="tweet-container">
+                        <div class="user-info-container">
+                            <div class="tweet-user-profile">
+
+                            </div>
+                            <div class="tweet-user-name-container">
+                                <div class="user-fullname">
+                                    Zaid Sultan
+                                </div>
+                                <div class="user-username">
+                                    @Zuzu24
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tweet-video-container">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="tweet-image-container">
+                            <div class="tweet-image">
+
+                            </div>
+                        </div>
+                        <div class="tweet-text-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eos consectetur accusamus soluta voluptatem ad quod corporis, alias omnis veritatis repellat quaerat, deserunt, facere vel. Minus blanditiis illum unde ad.
+                        </div>
+                        <div class="tweet-date-container">
+                            20 Hours
+                        </div>
+                    </div>
+                </div>
+                <div class="next-page-container" id="next-page" onclick="onNextPage()">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="tweet-sidebar-container">
+                <div class="twitter-sidebar">
+                    <div class="twitter-trending">
+                        <h5>Trending For You</h5>
+                        <ul>
+                            <li onclick="selectTrend(this)">#Coding</li>
+                            <li onclick="selectTrend(this)">#JavaScript</li>
+                            <li onclick="selectTrend(this)">#Python</li>
+                            <li onclick="selectTrend(this)">#Tesla</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/index.js" async defer></script>
+    </body>
+</html>
